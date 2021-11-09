@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="80mm"
+   height="25mm"
+   viewBox="6 5 80 25"
+   version="1.1"
+   id="svg5"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+>
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.0275814"
+     inkscape:cx="107.27066"
+     inkscape:cy="152.15172"
+     inkscape:window-width="2560"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="28.512518"
+       y="15.398068"
+       id="text3069"><tspan
+         sodipodi:role="line"
+         id="tspan3067"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'PT Serif Caption';-inkscape-font-specification:'PT Serif Caption';fill:#256ea4;fill-opacity:0.933333;stroke-width:0.264583"
+         x="28.512518"
+         y="15.398068">АЛЬТИКА</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="48.347321"
+       y="20.356766"
+       id="text4987"><tspan
+         sodipodi:role="line"
+         id="tspan4985"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Brush Script MT';-inkscape-font-specification:'Brush Script MT';fill:#256ea4;fill-opacity:1;stroke-width:0.264583"
+         x="48.347321"
+         y="20.356766">Эксперты рядом</tspan></text>
+    <g
+       id="Glyph"
+       transform="matrix(0.26458333,0,0,0.26458333,41.642296,36.694577)">
+        <polygon
+   points="61.973,26.273 61.973,21.396 32,-0.042 2.027,21.396 2.027,26.273 32,4.835 "
+   id="polygon77832"
+   style="fill:#256ea4;fill-opacity:1"
+   transform="matrix(0.93418093,0,0,0.79964127,-121.68661,-108.75867)" />
+
+        <path
+   d="m -91.792816,-102.41512 -23.519874,14.370352 v 30.430347 h 47.040692 v -30.430347 z m -10.162954,37.37763 h -2.76892 v -13.840991 l 2.76892,-1.172274 z m 4.614857,0 h -2.768907 v -16.067993 l 2.768907,-1.257035 z m 1.846875,0 v -18.294192 l 2.748361,1.679245 0.02057,16.614947 z m 7.384698,0 h -2.768912 v -15.672969 l 2.768912,1.580091 z m 4.615788,-0.03518 h -2.784794 l -0.01587,-14.19603 2.800674,-1.297818 z m 4.615789,0.05838 h -2.769847 v -16.665328 l 2.768912,-1.460145 v 18.125468 z m 0.647387,-19.296948 -0.532483,-0.648509 -8.458075,4.545161 -8.113361,-4.630722 -9.475395,4.659509 -0.0177,-1.575294 9.568807,-4.63472 7.947081,4.534766 7.660283,-3.982214 -0.525009,-0.640513 3.374261,-0.255885 z"
+   id="path77834"
+   style="fill:#256ea4;fill-opacity:1;stroke-width:0.864295" />
+
+    </g>
+  </g>
+</svg>
