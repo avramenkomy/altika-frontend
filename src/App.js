@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
-import { Paper, Container } from '@material-ui/core';
 
 import AppHeader from './components/appHeader/AppHeader';
-// import Logo from './components/Logo';
-
-
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,13 +27,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <AppHeader darkTheme={darkMode} onChangeTheme={setDarkMode} />
-      <Container
-        style={{ marginTop: '1rem'}}
-        disableGutters
-      >
-        <Paper style={{ width: '100%', height: '100vh' }} square />
-      </Container>
-
     </ThemeProvider>
   );
 }
