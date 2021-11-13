@@ -9,13 +9,12 @@ import Logo from './Logo/Logo';
 import CallUs from './CallUs/CallUs';
 
 import './AppHeader.css'
-import NavBar from "./NavBar/NavBar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: 'linear-gradient(0deg, #256EA4 50%, #508BB6)',
+    background: 'linear-gradient(0deg, #256EA4 30%, #508BB6)',
     flexGrow: 1,
-    padding: '4px'
+    padding: theme.spacing(1),
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -28,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
   },
   icon_button: {
     textAlign: 'center',
-    // alignItems: 'center'
   }
 }));
 
