@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles} from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import './logo.css'
 import LogoImage from '../../../resources/img/default_logo.jpeg';
