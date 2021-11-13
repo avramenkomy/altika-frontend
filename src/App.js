@@ -23,7 +23,6 @@ function App() {
       },
     }
   });
-  console.log(theme)
 
   return (
     <ThemeProvider theme={theme}>
