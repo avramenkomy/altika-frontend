@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
+import { Paper } from '@material-ui/core';
 
 import AppHeader from './components/appHeader/AppHeader';
 
@@ -27,6 +28,13 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <AppHeader darkTheme={darkMode} onChangeTheme={setDarkMode} />
+      <Paper
+        style={{
+          height: '100vh',
+          width: '90vw',
+          margin: "1rem auto 1rem auto"
+        }}
+      />
     </ThemeProvider>
   );
 }

@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
-import { Toolbar, Typography, AppBar, IconButton, Container, Grid } from '@material-ui/core';
+import { Toolbar, Typography, AppBar, IconButton, Container, Grid, Box } from '@material-ui/core';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness5Icon from '@material-ui/icons/Brightness5';
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-import Logo from '../logo/Logo';
+import Logo from './Logo/Logo';
+import CallUs from './CallUs/CallUs';
+
+import './AppHeader.css'
+import NavBar from "./NavBar/NavBar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    background: 'linear-gradient(0deg, #256EA4 50%, #508BB6)',
     flexGrow: 1,
+    padding: '4px'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -17,15 +23,19 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
-  grid_item: {
-    padding: theme.spacing(2),
+  nav: {
+    flexGrow: 1,
+  },
+  icon_button: {
     textAlign: 'center',
+    // alignItems: 'center'
   }
 }));
 
 function AppHeader(props) {
   const [dark, setDark] = useState(props.darkTheme);
-  const matches = useMediaQuery('(min-width: 768px)');
+  const matches600 = useMediaQuery('(min-width:600px)');
+  const matches960 = useMediaQuery('(min-width:960px)');
 
   const handleChangeTheme = () => {
     setDark(!dark);
@@ -34,13 +44,13 @@ function AppHeader(props) {
 
   const classes = useStyles();
     return (
-      <AppBar position="sticky">
-        <Grid container spacing={matches ? 3 : 1}>
-          { matches && <Grid item xs>
-            <Logo className={classes.grid_item}/>
+      <AppBar position="sticky" className={classes.root}>
+        <Grid container spacing={1} alignContent="center" alignItems="center">
+          { matches600 && <Grid item sm={3} md={2} lg={2}>
+            <Logo />
           </Grid> }
-          <Grid item xs={12} xl={8} sm={6} md={6}>
-            <Container className={classes.grid_item}>
+          <Grid item xs={9} sm={6} md={6} lg={6} className={classes.nav}>
+            <Container>
               <Toolbar>
                 <Typography variant="h6" component="a" className={classes.title}>
                   News
@@ -48,8 +58,11 @@ function AppHeader(props) {
               </Toolbar>
             </Container>
           </Grid>
-          { matches && <Grid item xs>
-            <IconButton onClick={handleChangeTheme} className={classes.grid_item}>
+          <Grid item xs={3} sm={3} md={3}>
+            <CallUs />
+          </Grid>
+          { matches960 && <Grid item md={1} className={classes.icon_button}>
+            <IconButton onClick={handleChangeTheme} >
               { dark ? <Brightness4Icon color="secondary" /> : <Brightness5Icon color="secondary" /> }
             </IconButton>
           </Grid> }
