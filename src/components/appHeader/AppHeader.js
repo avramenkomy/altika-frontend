@@ -32,7 +32,6 @@ const useStyles = makeStyles((theme) => ({
 
 function AppHeader(props) {
   const [dark, setDark] = useState(props.darkTheme);
-  const matches600 = useMediaQuery('(min-width:600px)');
   const matches960 = useMediaQuery('(min-width:960px)');
 
   const handleChangeTheme = () => {
@@ -42,12 +41,12 @@ function AppHeader(props) {
 
   const classes = useStyles();
     return (
-      <AppBar position="sticky" className={classes.root}>
+      <AppBar position={matches960 ? "sticky" : "static"} className={classes.root}>
         <Grid container spacing={1} alignContent="center" alignItems="center">
-          { matches600 && <Grid item sm={3} md={2} lg={2}>
+          { matches960 && <Grid item sm={3} md={2} lg={2}>
             <Logo />
           </Grid> }
-          <Grid item xs={9} sm={6} md={6} lg={6} className={classes.nav}>
+          <Grid item xs={9} sm={8} md={6} lg={5} className={classes.nav}>
             <Container>
               <Toolbar>
                 <Typography variant="h6" component="a" className={classes.title}>
@@ -56,7 +55,7 @@ function AppHeader(props) {
               </Toolbar>
             </Container>
           </Grid>
-          <Grid item xs={3} sm={3} md={3}>
+          <Grid item xs={3} sm={4} md={3} lg={4}>
             <CallUs />
           </Grid>
           { matches960 && <Grid item md={1} className={classes.icon_button}>
