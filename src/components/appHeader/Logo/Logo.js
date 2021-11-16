@@ -6,7 +6,7 @@ import LogoImage from '../../../resources/img/default_logo.jpeg';
 
 const useStyle = makeStyles((theme) => ({
   root: {
-    marginLeft: theme.spacing(2),
+    marginLeft: theme.spacing(1),
   },
   img: {
     objectFit: 'cover',

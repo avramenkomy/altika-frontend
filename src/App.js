@@ -4,6 +4,7 @@ import { Paper } from '@material-ui/core';
 
 import AppHeader from './components/appHeader/AppHeader';
 
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const theme = createTheme({
@@ -21,6 +22,17 @@ function App() {
         dark: '#F0F0F1',
         contrastText: '#000'
       },
+    },
+    typography: {
+      h6: {
+        fontSize: '1rem',
+        '@media (min-width: 1280px)': {
+          fontSize: '1.25rem',
+        },
+        '@media (min-width: 1920px)': {
+          fontSize: '1.5rem',
+        }
+      }
     }
   });
 
