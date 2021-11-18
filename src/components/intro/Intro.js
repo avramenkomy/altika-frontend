@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Box, Paper, Typography, Button } from '@material-ui/core';
+import { Container, Grid, Paper, Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import decoration from '../../resources/img/background_image/expert_man.jpeg';
