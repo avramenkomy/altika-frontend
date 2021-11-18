@@ -1,6 +1,5 @@
 import React from 'react';
-import { createTheme, ThemeProvider } from '@material-ui/core/styles';
-import { Toolbar, Typography, Link } from '@material-ui/core';
+import { Toolbar, Link } from '@material-ui/core';
 import { Grid } from '@mui/material';
 import { makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
