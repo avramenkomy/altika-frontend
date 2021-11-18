@@ -3,6 +3,8 @@ import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import { Paper } from '@material-ui/core';
 
 import AppHeader from './components/appHeader/AppHeader';
+// import About from './components/about/About';
+import Intro from './components/intro/Intro';
 
 
 function App() {
@@ -39,13 +41,17 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <AppHeader darkTheme={darkMode} onChangeTheme={setDarkMode} />
-      <Paper
-        style={{
-          height: '100vh',
-          width: '90vw',
-          margin: "1rem auto 1rem auto"
-        }}
-      />
+      <main>
+        <Intro />
+        {/*<About />*/}
+        <Paper
+          style={{
+            height: '100vh',
+            width: '90vw',
+            margin: "1rem auto 1rem auto"
+          }}
+        />
+      </main>
     </ThemeProvider>
   );
 }
