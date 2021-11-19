@@ -3,7 +3,7 @@ import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import { Paper } from '@material-ui/core';
 
 import AppHeader from './components/appHeader/AppHeader';
-// import About from './components/about/About';
+import About from './components/about/About';
 import Intro from './components/intro/Intro';
 
 
@@ -43,7 +43,7 @@ function App() {
       <AppHeader darkTheme={darkMode} onChangeTheme={setDarkMode} />
       <main>
         <Intro />
-        {/*<About />*/}
+        <About />
         <Paper
           style={{
             height: '100vh',
