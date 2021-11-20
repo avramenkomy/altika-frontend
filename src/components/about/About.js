@@ -1,18 +1,21 @@
 import React from 'react';
 import { Typography, Paper, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import clsx from 'clsx';
 
 import decoration from '../../resources/img/background_image/natural-paper.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(3),
+  },
+  root_light: {
     backgroundImage: `url(${decoration})`,
     backgroundColor: '#fff',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(3),
   },
   title: {
     textAlign: 'center',
@@ -24,11 +27,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function About() {
+export default function About(props) {
   const classes = useStyles();
 
+  const rootStyle = clsx({
+    [classes.root] : true,
+    [classes.root_light] : !props.darkTheme
+  });
+
   return (
-    <Paper className={classes.root}>
+    <Paper className={rootStyle} square>
       <Container maxWidth={"md"}>
         <Typography variant="h4" gutterBottom className={classes.title}>
           О нашей компании

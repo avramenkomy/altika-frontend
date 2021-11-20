@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
-import { Paper } from '@material-ui/core';
+// import { Paper } from '@material-ui/core';
 
 import AppHeader from './components/appHeader/AppHeader';
 import About from './components/about/About';
@@ -43,14 +43,14 @@ function App() {
       <AppHeader darkTheme={darkMode} onChangeTheme={setDarkMode} />
       <main>
         <Intro />
-        <About />
-        <Paper
-          style={{
-            height: '100vh',
-            width: '90vw',
-            margin: "1rem auto 1rem auto"
-          }}
-        />
+        <About darkTheme={darkMode} />
+        {/*<Paper*/}
+        {/*  style={{*/}
+        {/*    height: '100vh',*/}
+        {/*    width: '90vw',*/}
+        {/*    margin: "1rem auto 1rem auto"*/}
+        {/*  }}*/}
+        {/*/>*/}
       </main>
     </ThemeProvider>
   );
