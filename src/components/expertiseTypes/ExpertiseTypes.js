@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Paper, Typography } from '@material-ui/core';
+import { Container, Paper, Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import ExpertiseCard from './ExpertiseCard';
@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     textAlign: 'center',
   },
+  wrapper: {
+    textAlign: 'center',
+  },
 }));
 
 
@@ -37,15 +40,21 @@ function ExpertiseTypes() {
 
   return (
     <Paper square className={classes.root}>
-      <Container maxWidth={"md"}>
+      <Container maxWidth={"lg"}>
         <Typography variant="h5" className={classes.title}>
           Виды экспертиз
         </Typography>
-        {
-          expertiseTypes.map((item) => {
-            return <ExpertiseCard {...item} key={item.id}/>
-          })
-        }
+        <Grid container>
+          {
+            expertiseTypes.map((item) => {
+              return (
+                <Grid item xs={12} sm={6} md={4}>
+                  <ExpertiseCard {...item} key={item.id}/>
+                </Grid>
+              )
+            })
+          }
+        </Grid>
       </Container>
     </Paper>
   )
