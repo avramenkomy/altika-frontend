@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
-// import { Paper } from '@material-ui/core';
 
 import AppHeader from './components/appHeader/AppHeader';
 import About from './components/about/About';
 import Intro from './components/intro/Intro';
 import ExpertiseTypes from './components/expertiseTypes/ExpertiseTypes';
+import Services from './components/servicesMenu/services';
 
 
 function App() {
@@ -57,6 +57,7 @@ function App() {
         <Intro />
         <About darkTheme={darkMode} />
         <ExpertiseTypes />
+        <Services />
       </main>
     </ThemeProvider>
   );
