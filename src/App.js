@@ -5,6 +5,7 @@ import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import AppHeader from './components/appHeader/AppHeader';
 import About from './components/about/About';
 import Intro from './components/intro/Intro';
+import ExpertiseTypes from './components/expertiseTypes/ExpertiseTypes';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
       <main>
         <Intro />
         <About darkTheme={darkMode} />
+        <ExpertiseTypes />
         {/*<Paper*/}
         {/*  style={{*/}
         {/*    height: '100vh',*/}
