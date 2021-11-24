@@ -27,6 +27,17 @@ function App() {
       },
     },
     typography: {
+      h2: {
+        '@media (max-width: 501px)': {
+          fontSize: '40px',
+        },
+        '@media (max-width: 401px)': {
+          fontSize: '30px',
+        },
+        '@media (max-width: 301px)': {
+          fontSize: '20px',
+        },
+      },
       h6: {
         fontSize: '1rem',
         '@media (min-width: 1280px)': {
