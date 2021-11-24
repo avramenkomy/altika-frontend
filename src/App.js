@@ -46,13 +46,6 @@ function App() {
         <Intro />
         <About darkTheme={darkMode} />
         <ExpertiseTypes />
-        {/*<Paper*/}
-        {/*  style={{*/}
-        {/*    height: '100vh',*/}
-        {/*    width: '90vw',*/}
-        {/*    margin: "1rem auto 1rem auto"*/}
-        {/*  }}*/}
-        {/*/>*/}
       </main>
     </ThemeProvider>
   );
