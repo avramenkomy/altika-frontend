@@ -34,9 +34,9 @@ const useStyles = makeStyles((theme) => ({
     border: '1px solid #e2e2e1',
     overflow: 'hidden',
     borderRadius: 4,
-    backgroundColor: '#fcfcfb',
+    backgroundColor: '#E0E1E2',
     '&:hover': {
-      backgroundColor: '#fff',
+      backgroundColor: '#E0E0E2',
     },
     '&$focused': {
       backgroundColor: '#fff',
