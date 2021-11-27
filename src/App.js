@@ -5,7 +5,7 @@ import AppHeader from './components/appHeader/AppHeader';
 import About from './components/about/About';
 import Intro from './components/intro/Intro';
 import ExpertiseTypes from './components/expertiseTypes/ExpertiseTypes';
-import Services from './components/servicesMenu/services';
+import Services from './components/servicesMenu/Services';
 
 
 function App() {
