@@ -1,11 +1,11 @@
 import React from 'react';
-import { Card, CardContent, CardMedia, Typography } from '@material-ui/core';
+import { Typography, Divider, Button, Container, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+
+import './ServiceCard.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 400,
-    minWidth: 250,
     margin: theme.spacing(2),
   },
   media: {
@@ -14,27 +14,82 @@ const useStyles = makeStyles((theme) => ({
   card: {
     textAlign: 'center',
   },
+  service: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  service__card: {
+    width: '40vw',
+    background: '#F2F2F2',
+    textAlign: 'center',
+  },
+  service__title: {
+    margin: theme.spacing(3),
+    textAlign: 'center',
+  },
+  service__price: {
+    margin: theme.spacing(2),
+    textAlign: 'center',
+  },
+  service_desc: {
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+  },
+  actionBtn: {
+    margin: theme.spacing(2),
+    textAlign: 'center',
+  },
 }));
 
-function ServiceCard({title, description, url}) {
+
+function ServiceCard({title, price, description, url, darkMode}) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardMedia
-        className={classes.media}
-        image={url}
-        title={title}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="h2">
-          {title}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {description}
-        </Typography>
-      </CardContent>
-    </Card>
+    <div className={classes.root}>
+      <Container>
+        <div className="wrapper">
+          <div className="container_1">
+          <div className={classes.service__title}>
+            <Typography gutterBottom variant="h4" component="h2">{title}</Typography>
+          </div>
+          <Divider />
+          <div className={classes.service__price}>
+            <Typography gutterBottom variant="h6" component="span">Стоимость услуги: </Typography>
+            <Typography gutterBottom variant="h6" component="span">{price}</Typography>
+          </div>
+          <Divider />
+          <div className={classes.actionBtn}>
+            <Button variant="contained" color="primary" size="small">Оставить заявку</Button>
+          </div>
+          </div>
+          
+          <div className="container_2">
+            <div className="dark_shadow" />
+            <Box
+              className={classes.service_desc}
+              style={{
+                backgroundImage: `url(${url})`,
+                minHeight: '400px',
+                display: 'flex',
+                alignItems: 'center',
+                borderRadius: '10px',
+              }}
+            >
+              <div className="title__content">
+                <Typography component="p" variant="h6">
+                  {description}
+                </Typography>
+              </div>
+            </Box>
+          </div>
+        </div>
+      </Container>
+      
+    </div>
   )
 }
 

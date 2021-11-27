@@ -10,6 +10,7 @@ import Services from './components/servicesMenu/Services';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  
   const theme = createTheme({
     palette: {
       type: darkMode ? 'dark' : 'light',
@@ -57,7 +58,7 @@ function App() {
         <Intro />
         <About darkTheme={darkMode} />
         <ExpertiseTypes />
-        <Services />
+        <Services darkMode={darkMode} />
       </main>
     </ThemeProvider>
   );
