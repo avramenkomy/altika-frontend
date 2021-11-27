@@ -48,8 +48,8 @@ function ExpertiseTypes() {
           {
             expertiseTypes.map((item) => {
               return (
-                <Grid item xs={12} sm={6} md={4}>
-                  <ExpertiseCard {...item} key={item.id}/>
+                <Grid item xs={12} sm={6} md={4} key={item.id}>
+                  <ExpertiseCard {...item} />
                 </Grid>
               )
             })
