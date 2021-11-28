@@ -3,6 +3,7 @@ import { Typography, Divider, Button, Container, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import './ServiceCard.css';
+import OrderModal from '../intro/OrderModal';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,8 +49,15 @@ const useStyles = makeStyles((theme) => ({
 function ServiceCard({title, price, description, url, darkMode}) {
   const classes = useStyles();
 
+  const [openModal, setOpenModal] = React.useState(false);
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  }
+
   return (
     <div className={classes.root}>
+      <OrderModal open={openModal} onClose={handleCloseModal} />
       <Container>
         <div className="wrapper">
           <div className="container_1">
@@ -63,7 +71,7 @@ function ServiceCard({title, price, description, url, darkMode}) {
           </div>
           <Divider />
           <div className={classes.actionBtn}>
-            <Button variant="contained" color="primary" size="small">Оставить заявку</Button>
+            <Button onClick={ () => setOpenModal(true) } variant="contained" color="primary" size="small">Оставить заявку</Button>
           </div>
           </div>
           
