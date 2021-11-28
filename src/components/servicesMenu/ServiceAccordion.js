@@ -4,6 +4,8 @@ import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import MuiTypography from '@material-ui/core/Typography';
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
 
 const useStyles = makeStyles(theme => ({
   dark_shadow: {
@@ -74,12 +76,12 @@ function ServicesAccordion({serviceTypes}) {
   };
 
   return (
-    <>
+    <React.Fragment>
     {
       serviceTypes.map(service => {
         return (
           <Accordion square expanded={expanded === `panel${service.id}`} onChange={handleChange(`panel${service.id}`)} key={service.id}>
-            <AccordionSummary aria-controls={`panel${service.id}-content`} id={`panel${service.id}-header`}>
+            <AccordionSummary aria-controls={`panel${service.id}-content`} id={`panel${service.id}-header`} expandIcon={expanded ? <RemoveCircleOutlineIcon color="secondary"/> : <AddCircleOutlineIcon color="secondary"/>}>
               <Typography>{service.title}</Typography>
             </AccordionSummary>            
             <AccordionDetails style={{
@@ -97,7 +99,7 @@ function ServicesAccordion({serviceTypes}) {
         )
       })
     }      
-    </>
+    </React.Fragment>
   );
 }
 
