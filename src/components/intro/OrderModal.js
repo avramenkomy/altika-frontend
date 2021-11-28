@@ -122,7 +122,7 @@ function OrderModal(props) {
       </Grid>
       </DialogContent>
       <DialogActions>
-        <Grid contaner className={classes.itemsAction}>
+        <Grid container className={classes.itemsAction}>
           <Grid item xs={12}>
             <Button variant="contained" onClick={handleSendOrder} color="primary" fullWidth>
               Отправить

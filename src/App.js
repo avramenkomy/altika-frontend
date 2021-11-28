@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
-// import { Paper } from '@material-ui/core';
 
 import AppHeader from './components/appHeader/AppHeader';
 import About from './components/about/About';
 import Intro from './components/intro/Intro';
 import ExpertiseTypes from './components/expertiseTypes/ExpertiseTypes';
+import Services from './components/servicesMenu/Services';
 
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  
   const theme = createTheme({
     palette: {
       type: darkMode ? 'dark' : 'light',
@@ -27,6 +28,17 @@ function App() {
       },
     },
     typography: {
+      h2: {
+        '@media (max-width: 501px)': {
+          fontSize: '40px',
+        },
+        '@media (max-width: 401px)': {
+          fontSize: '30px',
+        },
+        '@media (max-width: 301px)': {
+          fontSize: '20px',
+        },
+      },
       h6: {
         fontSize: '1rem',
         '@media (min-width: 1280px)': {
@@ -46,6 +58,7 @@ function App() {
         <Intro />
         <About darkTheme={darkMode} />
         <ExpertiseTypes />
+        <Services darkMode={darkMode} />
       </main>
     </ThemeProvider>
   );
