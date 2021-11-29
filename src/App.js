@@ -6,6 +6,7 @@ import About from './components/about/About';
 import Intro from './components/intro/Intro';
 import ExpertiseTypes from './components/expertiseTypes/ExpertiseTypes';
 import Services from './components/servicesMenu/Services';
+import StepByWork from './components/stepByWork/StepByWork';
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
         <About darkTheme={darkMode} />
         <ExpertiseTypes />
         <Services darkMode={darkMode} />
+        <StepByWork />
       </main>
     </ThemeProvider>
   );
