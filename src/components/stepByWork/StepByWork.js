@@ -1,10 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Stepper, Step, StepLabel, StepContent, Button, Typography} from '@material-ui/core';
+import { Stepper, Step, StepLabel, StepContent, Button, Typography, Container, Paper} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
+    width: '100vw',
   },
   button: {
     marginTop: theme.spacing(1),
@@ -80,41 +82,45 @@ function StepByWork() {
   };
 
   return (
-    <div className={classes.root}>
-      <Stepper activeStep={activeStep} orientation="vertical">
-        {steps.map((label, index) => (
-          <Step key={label}>
-            <StepLabel onClick={() => {handleNext(index)}}>{label}</StepLabel>
-            <StepContent>
-              <Typography>{getStepContent(index)}</Typography>
-              <div className={classes.actionsContainer}>
-                <div>
+    
+      <Paper className={classes.root}>
+        <Container maxWidth={"md"}>
+        <Stepper activeStep={activeStep} orientation="vertical">
+          {steps.map((label, index) => (
+            <Step key={label}>
+              <StepLabel onClick={() => {handleNext(index)}}>{label}</StepLabel>
+              <StepContent>
+                <Typography>{getStepContent(index)}</Typography>
+                <div className={classes.actionsContainer}>
+                  <div>
 
-                  {
-                    activeStep === 0
-                      ? null
-                      : <Button onClick={handleBack} className={classes.button}>Back</Button>
-                  }
-                  
-                  {
-                    activeStep === steps.length - 1
-                      ? null
-                      : <Button
-                          variant="contained"
-                          color="primary"
-                          onClick={handleNext}
-                          className={classes.button}
-                        >
-                          Next
-                        </Button>
-                  }
+                    {
+                      activeStep === 0
+                        ? null
+                        : <Button onClick={handleBack} className={classes.button}>Back</Button>
+                    }
+                    
+                    {
+                      activeStep === steps.length - 1
+                        ? null
+                        : <Button
+                            variant="contained"
+                            color="primary"
+                            onClick={handleNext}
+                            className={classes.button}
+                          >
+                            Next
+                          </Button>
+                    }
+                  </div>
                 </div>
-              </div>
-            </StepContent>
-          </Step>
-        ))}
-      </Stepper>
-    </div>
+              </StepContent>
+            </Step>
+          ))}
+        </Stepper>
+        </Container>
+      </Paper>
+    
   );
 }
 
