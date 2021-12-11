@@ -28,14 +28,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundPositionY: 'center',
     backgroundAttachment: 'fixed',
   },
-  dark_shadow: {
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    right: '0',
-    bottom: '0',
-    backgroundColor: 'rgba(0,0,0,.58)',
-  },
   content: {
     width: '60vw',
     marginLeft: 'auto',
@@ -74,7 +66,6 @@ function ReasonsForExpertise() {
 
   return(
     <Paper className={classes.root} square>
-      {/* <div className={classes.dark_shadow} /> */}
       <Paper className={classes.content} square>
         <Typography variant="h4" component="h4" className={classes.title} >
           Независимая экспертиза и оценка необходима в следующих ситуациях:
