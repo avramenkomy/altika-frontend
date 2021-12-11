@@ -1,10 +1,12 @@
 import React from 'react';
-import { Paper, Typography, Grid } from '@material-ui/core';
+import { Paper, Typography, Grid, useMediaQuery } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import { green } from '@material-ui/core/colors';
+
+import clsx from 'clsx';
 
 import decoration from '../../resources/img/background_image/fucking_with_laptop.jpeg'; // TODO: Тут стоит приложить картинку с более политкорректным названием
-import { green } from '@material-ui/core/colors';
 
 const reasonsArr = [
   'установление истины в судопроизводстве;',
@@ -28,12 +30,21 @@ const useStyles = makeStyles((theme) => ({
     backgroundPositionY: 'center',
     backgroundAttachment: 'fixed',
   },
+  root_mobile: {
+    width: '100%',
+  },
   content: {
     width: '60vw',
     marginLeft: 'auto',
     marginRight: 'auto',
     textAlign: 'center',
     paddingBottom: theme.spacing(3),
+  },
+  content__mobile: {
+    width: '100%',
+    textAlign: 'center',
+    paddingBottom: theme.spacing(1),
+
   },
   title: {
     paddingTop: theme.spacing(4),
@@ -61,12 +72,25 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 function ReasonsForExpertise() {
+  
+  const matches800 = useMediaQuery('(min-width:800px)');
   const classes = useStyles();
 
+  const rootStyle = clsx({
+    [classes.root] : matches800,
+    [classes.root_mobile] : !matches800
+  });
+
+  const contentStyle = clsx({
+    [classes.content] : matches800,
+    [classes.content__mobile] : !matches800
+  });
+
   return(
-    <Paper className={classes.root} square>
-      <Paper className={classes.content} square>
+    <Paper className={rootStyle} square>
+      <Paper className={contentStyle} square>
         <Typography variant="h4" component="h4" className={classes.title} >
           Независимая экспертиза и оценка необходима в следующих ситуациях:
         </Typography>
