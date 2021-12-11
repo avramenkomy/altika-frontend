@@ -7,6 +7,7 @@ import Intro from './components/intro/Intro';
 import ExpertiseTypes from './components/expertiseTypes/ExpertiseTypes';
 import Services from './components/servicesMenu/Services';
 import StepByWork from './components/stepByWork/StepByWork';
+import News from './components/news/News';
 
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
         <ExpertiseTypes />
         <Services darkMode={darkMode} />
         <StepByWork />
+        <News />
       </main>
     </ThemeProvider>
   );
