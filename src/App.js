@@ -8,6 +8,7 @@ import ExpertiseTypes from './components/expertiseTypes/ExpertiseTypes';
 import Services from './components/servicesMenu/Services';
 import StepByWork from './components/stepByWork/StepByWork';
 import News from './components/news/News';
+import ReasonsForExpertise from './components/reasons/ReasonsComponent';
 
 
 function App() {
@@ -62,7 +63,9 @@ function App() {
         <ExpertiseTypes />
         <Services darkMode={darkMode} />
         <StepByWork />
+        <ReasonsForExpertise />
         <News />
+        
       </main>
     </ThemeProvider>
   );
