@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     // maxHeight: 500,
-    height: 'auto',
+    height: '70vh',
     objectFit: 'cover',
     objectPosition: 'center',
     repeat: 'no-repeat',
