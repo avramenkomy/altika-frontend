@@ -9,6 +9,7 @@ import Services from './components/servicesMenu/Services';
 import StepByWork from './components/stepByWork/StepByWork';
 import News from './components/news/News';
 import ReasonsForExpertise from './components/reasons/ReasonsComponent';
+import FooterComponent from './components/footer/FooterComponent';
 
 
 function App() {
@@ -67,6 +68,9 @@ function App() {
         <News />
         
       </main>
+      <footer>
+        <FooterComponent />
+      </footer>
     </ThemeProvider>
   );
 }
