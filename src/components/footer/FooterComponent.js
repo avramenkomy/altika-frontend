@@ -4,6 +4,8 @@ import { Paper, Container, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import ListItemsComponent from './ListItemsComponent';
+import ContactsComponent from './ContactsComponent';
+import SocialComponent from './SocialComponent';
 import MapsComponent from './MapsComponent';
 
 const useStyles = makeStyles((theme) => ({
@@ -16,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
   },
   bottom_text: {
     textAlign: 'center'
+  },
+  item: {
+    maxWidth: '100%'
   }
 }));
 
@@ -25,20 +30,24 @@ function FooterComponent() {
   return (
     <Paper className={classes.root} square>
       <Grid container>
+
+        <Grid item sm={12} md={4} container direction="column">
+          <Grid item xs={9} className={classes.item}>
+            <ListItemsComponent />
+          </Grid>
+          <Grid item xs={3} className={classes.item}>
+            <SocialComponent />
+          </Grid>
+        </Grid>
+
         <Grid item sm={12} md={4}>
-          <ListItemsComponent />
+          <ContactsComponent />
         </Grid>
-        <Grid container direction="column" item xs={12} sm={4}>
-          <Grid item sm={9}>
-            <div>ContactsComponent</div>
-          </Grid>
-          <Grid item sm={3}>
-            <div>SocialComponent</div>
-          </Grid>
-        </Grid>
+
         <Grid item sm={12} md={4}>
           <MapsComponent width="425" height="350" />
         </Grid>
+
       </Grid>
       <Grid container className={classes.bottom_container}>
         <Container>
