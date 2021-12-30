@@ -3,6 +3,7 @@ import { Paper, Container, Grid, Typography } from '@material-ui/core';
 
 import { makeStyles } from '@material-ui/core/styles';
 
+import ListItemsComponent from './ListItemsComponent';
 import MapsComponent from './MapsComponent';
 
 const useStyles = makeStyles((theme) => ({
@@ -25,7 +26,7 @@ function FooterComponent() {
     <Paper className={classes.root} square>
       <Grid container>
         <Grid item sm={12} md={4}>
-          <div>ListItems component</div>
+          <ListItemsComponent />
         </Grid>
         <Grid container direction="column" item xs={12} sm={4}>
           <Grid item sm={9}>
