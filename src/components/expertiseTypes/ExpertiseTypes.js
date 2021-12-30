@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
-    width: '100vw',
   },
   title: {
     textAlign: 'center',
