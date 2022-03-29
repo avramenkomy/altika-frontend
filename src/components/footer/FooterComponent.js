@@ -45,7 +45,7 @@ function FooterComponent() {
         </Grid>
 
         <Grid item sm={12} md={4}>
-          <MapsComponent width="425" height="350" />
+          <MapsComponent width="100%" height="350" />
         </Grid>
 
       </Grid>
