@@ -6,6 +6,10 @@ import About from './components/about/About';
 import Intro from './components/intro/Intro';
 import ExpertiseTypes from './components/expertiseTypes/ExpertiseTypes';
 import Services from './components/servicesMenu/Services';
+import StepByWork from './components/stepByWork/StepByWork';
+import News from './components/news/News';
+import ReasonsForExpertise from './components/reasons/ReasonsComponent';
+import FooterComponent from './components/footer/FooterComponent';
 
 
 function App() {
@@ -59,7 +63,14 @@ function App() {
         <About darkTheme={darkMode} />
         <ExpertiseTypes />
         <Services darkMode={darkMode} />
+        {/* <StepByWork /> */}
+        <ReasonsForExpertise />
+        <News />
+        
       </main>
+      <footer>
+        <FooterComponent />
+      </footer>
     </ThemeProvider>
   );
 }
