@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
-    width: '100vw',
+    // width: '100vw',
   },
   button: {
     marginTop: theme.spacing(1),

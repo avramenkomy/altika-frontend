@@ -63,7 +63,7 @@ function App() {
         <About darkTheme={darkMode} />
         <ExpertiseTypes />
         <Services darkMode={darkMode} />
-        {/* <StepByWork /> */}
+        <StepByWork />
         <ReasonsForExpertise />
         <News />
         
