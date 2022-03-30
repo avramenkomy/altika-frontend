@@ -10,6 +10,7 @@ import StepByWork from './components/stepByWork/StepByWork';
 import News from './components/news/News';
 import ReasonsForExpertise from './components/reasons/ReasonsComponent';
 import FooterComponent from './components/footer/FooterComponent';
+import License from './components/licenseDocuments/LicenseDocuments';
 
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
         <ExpertiseTypes />
         <Services darkMode={darkMode} />
         <StepByWork />
+        <License />
         <ReasonsForExpertise />
         <News />
         
