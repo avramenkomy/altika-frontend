@@ -6,14 +6,31 @@ import { faVk, faInstagram, faYoutube, faWhatsapp } from '@fortawesome/free-bran
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    '& > svg': {
-      margin: theme.spacing(1),
-    },
-    textAlign: 'center'
+    // '& > svg': {
+    //   margin: theme.spacing(1),
+    // },
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'flex-start',
+    marginLeft: theme.spacing(2),
+    // textAlign: 'center'
   },
   title: {
-    textAlign: 'center'
-  }
+    // textAlign: 'center'
+    marginBottom: theme.spacing(1),
+  },
+  icons: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'flex-start',
+  },
+  icon_item: {
+    marginRight: theme.spacing(2),
+  },
 }));
 
 function SocialComponent() {
@@ -21,15 +38,17 @@ function SocialComponent() {
 
   return (
     <div className={classes.root}>
-      <div className={classes.title}>
+      <div className={classes.title} hidden={false}>
         <Typography variant="body" component="p">
-          Присоединяйтесь к нам в социальныйх сетях
+          Присоединяйтесь к нам в социальных сетях
         </Typography>
       </div>
-      <FontAwesomeIcon icon={faVk} size='2x'/>
-      <FontAwesomeIcon icon={faInstagram} size='2x'/>
-      <FontAwesomeIcon icon={faYoutube} size='2x'/>
-      <FontAwesomeIcon icon={faWhatsapp} size='2x'/>
+      <div className={classes.icons}>
+        <div className={classes.icon_item}><FontAwesomeIcon icon={faVk} size='2x'/></div>
+        <div className={classes.icon_item}><FontAwesomeIcon icon={faInstagram} size='2x'/></div>
+        <div className={classes.icon_item}><FontAwesomeIcon icon={faYoutube} size='2x'/></div>
+        <div className={classes.icon_item}><FontAwesomeIcon icon={faWhatsapp} size='2x'/></div>
+      </div>
     </div>
   )
 }
