@@ -39,7 +39,7 @@ function SocialComponent() {
   return (
     <div className={classes.root}>
       <div className={classes.title} hidden={false}>
-        <Typography variant="body" component="p">
+        <Typography variant="body1" component="p">
           Присоединяйтесь к нам в социальных сетях
         </Typography>
       </div>
