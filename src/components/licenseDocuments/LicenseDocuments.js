@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
   },
+  title: {
+    textAlign: 'center'
+  }
 }));
 
 function LicenseDocuments () {
