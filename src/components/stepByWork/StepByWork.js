@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
   resetContainer: {
     padding: theme.spacing(3),
   },
+  title: {
+    textAlign: 'center'
+  },
 }));
 
 function getSteps() {
@@ -85,6 +88,9 @@ function StepByWork() {
     
       <Paper className={classes.root}>
         <Container maxWidth={"md"}>
+        <Typography variant="h5" className={classes.title}>
+          Как заказать проведение независимой экспертизы
+        </Typography>
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((label, index) => (
             <Step key={label}>
