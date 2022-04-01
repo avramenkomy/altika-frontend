@@ -6,19 +6,14 @@ import { faVk, faInstagram, faYoutube, faWhatsapp } from '@fortawesome/free-bran
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // '& > svg': {
-    //   margin: theme.spacing(1),
-    // },
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'flex-start',
     marginLeft: theme.spacing(2),
-    // textAlign: 'center'
   },
   title: {
-    // textAlign: 'center'
     marginBottom: theme.spacing(1),
   },
   icons: {
@@ -44,10 +39,10 @@ function SocialComponent() {
         </Typography>
       </div>
       <div className={classes.icons}>
-        <div className={classes.icon_item}><FontAwesomeIcon icon={faVk} size='2x'/></div>
-        <div className={classes.icon_item}><FontAwesomeIcon icon={faInstagram} size='2x'/></div>
-        <div className={classes.icon_item}><FontAwesomeIcon icon={faYoutube} size='2x'/></div>
-        <div className={classes.icon_item}><FontAwesomeIcon icon={faWhatsapp} size='2x'/></div>
+        <div className={classes.icon_item}><FontAwesomeIcon icon={faVk} size="2x"/></div>
+        <div className={classes.icon_item}><FontAwesomeIcon icon={faInstagram} size="2x"/></div>
+        <div className={classes.icon_item}><FontAwesomeIcon icon={faYoutube} size="2x"/></div>
+        <div className={classes.icon_item}><FontAwesomeIcon icon={faWhatsapp} size="2x"/></div>
       </div>
     </div>
   )
