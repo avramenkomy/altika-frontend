@@ -28,12 +28,13 @@ function ListItemsComponent() {
       <ListItemLink href="#">
         <ListItemText primary="Стоимость" />
       </ListItemLink>
-      <ListItemLink href="#">
+      {/* TODO: Скрытые элементы меню футера в разработке*/}
+      {/* <ListItemLink href="#">
         <ListItemText primary="Блог" />
       </ListItemLink>
       <ListItemLink href="#">
         <ListItemText primary="FAQ" />
-      </ListItemLink>
+      </ListItemLink> */}
     </List>
   )
 }
