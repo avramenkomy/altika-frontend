@@ -35,23 +35,17 @@
 }
 
 .left-arrow, .right-arrow {
-    position: absolute;
     z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
-    border-radius: 24px;
-    background-color: white;
+    margin: auto 0 auto 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: #f3f5f7;
     border: 1px solid #ddd;
 }
 
-.left-arrow {
-    left: 24px;
-}
-
-.right-arrow {
-    right: 24px;
+.left-arrow:hover, .right-arrow:hover {
+    background: #e5e5e5;
 }
 
 .carousel-content.show-2 > * {

@@ -25,4 +25,11 @@
     opacity: 1;
     top: 2em;
 }
+
+/* скрытие подсказок на сенсорном устройстве */
+@media (hover: none) and (pointer: coarse) {
+    [data-tooltip]::after {
+        display: none;
+    }
+}
   

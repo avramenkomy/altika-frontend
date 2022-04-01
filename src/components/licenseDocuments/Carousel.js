@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+
 import './styles.css';
 
 const Carousel = (props) => {
@@ -53,9 +54,9 @@ const Carousel = (props) => {
   return (
     <div className="carousel-container">
       <div className="carousel-wrapper">
-        {currentIndex > 0 && <button className="left-arrow" onClick={prev}>
+        <button className="left-arrow" onClick={prev} disabled={!(currentIndex > 0)}>
           &lt;
-        </button>}
+        </button>
         <div
           className="carousel-content-wrapper"
           onTouchStart={handleTouchStart}
@@ -65,9 +66,9 @@ const Carousel = (props) => {
             {children}
           </div>
         </div>
-        {currentIndex < (length - show) && <button className="right-arrow" onClick={next}>
+        <button className="right-arrow" onClick={next} disabled={!(currentIndex < (length - show))}>
           &gt;
-        </button>}
+        </button>
       </div>
     </div>
   )
