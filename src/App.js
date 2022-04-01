@@ -64,11 +64,10 @@ function App() {
         <About darkTheme={darkMode} />
         <ExpertiseTypes />
         <Services darkMode={darkMode} />
-        <StepByWork />
-        <License />
+        <StepByWork />        
         <ReasonsForExpertise />
-        <News />
-        
+        <License />
+        {/* <News /> */} {/* TODO: Скрытый компонент на стадии разработки */}
       </main>
       <footer>
         <FooterComponent />
