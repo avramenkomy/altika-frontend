@@ -2,11 +2,19 @@ import React from 'react';
 import { List, ListItem, ListItemText } from '@material-ui/core';
 
 import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
+import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(1)
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
+  },
+  centerText: {
+    '& > *': {
+      textAlign: 'center'
+    }
   }
 }));
 
@@ -16,9 +24,15 @@ function ListItemLink(props) {
 
 function ListItemsComponent() {
   const classes = useStyles();
+  const widthMore600 = useMediaQuery('(min-width:600px)');
+
+  const rootStyle = clsx({
+    [classes.root] : true,
+    [classes.centerText] : !widthMore600
+  });
 
   return (
-    <List className={classes.root}>
+    <List className={rootStyle}>
       <ListItemLink href="#">
         <ListItemText primary="Виды экспертиз" />
       </ListItemLink>

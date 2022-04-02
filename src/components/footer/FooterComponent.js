@@ -1,5 +1,7 @@
 import React from 'react';
 import { Paper, Container, Grid, Typography } from '@material-ui/core';
+import { Hidden } from '@material-ui/core';
+import { useMediaQuery } from '@material-ui/core';
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -26,25 +28,36 @@ const useStyles = makeStyles((theme) => ({
 
 function FooterComponent() {
   const classes = useStyles();
+
+  const widthMore600 = useMediaQuery('(min-width:600px)');
+  const direction = widthMore600 ? 'row' : 'column';
   
   return (
     <Paper className={classes.root} square>
-      <Grid container>
+      <Grid container direction={direction}>
 
-        <Grid item sm={12} md={4} container direction="column">
-          <Grid item xs={9} className={classes.item}>
+        <Grid item sm={6} md={3} container direction="column" justifyContent="space-between">
+          <Grid item className={classes.item}>
             <ListItemsComponent />
           </Grid>
-          <Grid item xs={3} className={classes.item}>
+          <Hidden only={["xs"]}>
+          <Grid item className={classes.item}>
             <SocialComponent />
           </Grid>
+          </Hidden>
         </Grid>
 
-        <Grid item sm={12} md={4}>
+        <Grid item sm={6} md={3} justifyContent="center">
           <ContactsComponent />
         </Grid>
 
-        <Grid item sm={12} md={4}>
+        <Hidden only={["sm", "md", "lg", "xl"]}>
+          <Grid item sm={12} md={4}>
+            <SocialComponent />
+          </Grid>
+        </Hidden>
+
+        <Grid item sm={12} md={6}>
           <MapsComponent width="100%" height="350" />
         </Grid>
 
