@@ -11,6 +11,7 @@ import StepByWork from './components/stepByWork/StepByWork';
 import ReasonsForExpertise from './components/reasons/ReasonsComponent';
 import FooterComponent from './components/footer/FooterComponent';
 import License from './components/licenseDocuments/LicenseDocuments';
+import Notes from './components/notes/Notes';
 
 
 function App() {
@@ -68,6 +69,7 @@ function App() {
         <ReasonsForExpertise />
         <License />
         {/* <News /> */} {/* TODO: Скрытый компонент на стадии разработки */}
+        <Notes />
       </main>
       <footer>
         <FooterComponent />
