@@ -60,7 +60,7 @@ const Carousel = (props) => {
     interval = setInterval(() => {
       next();
       clearInterval(interval);
-    }, 2000);
+    }, 4000);
   }
 
   return (
