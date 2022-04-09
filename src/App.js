@@ -58,18 +58,23 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <div id="header" />
       <AppHeader darkTheme={darkMode} onChangeTheme={setDarkMode} />
       <main>
         <Intro />
-        <About darkTheme={darkMode} />
+        <div id="about" />
+        <About darkTheme={darkMode} id="about"/>
+        <div id="expertise_types" />
         <ExpertiseTypes />
+        <div id="services" />
         <Services darkMode={darkMode} />
-        <StepByWork />        
+        <StepByWork />
         <ReasonsForExpertise />
         <License />
         {/* <News /> */} {/* TODO: Скрытый компонент на стадии разработки */}
       </main>
       <footer>
+        <div id='contacts' />
         <FooterComponent />
       </footer>
     </ThemeProvider>
