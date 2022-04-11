@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import { List, ListItem, ListItemIcon } from '@material-ui/core';
 
 import { makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -24,10 +24,6 @@ const useStyles = makeStyles((theme) => ({
     }
   },
 }));
-
-function ListItemLink(props) {
-  return <ListItem button component="a" {...props} />;
-}
 
 function ListItemsComponent() {
   const classes = useStyles();
